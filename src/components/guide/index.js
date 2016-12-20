@@ -14,6 +14,11 @@ export default class Guide extends React.Component {
     return false;
   }
   render() {
+    if (this.state.isMobile) {
+      return (
+        null
+      );
+    }
     return (
       <div style={{ display: this.state.isMobile ? 'none' : 'block' }}>
         <div className={`${style.guide} ${style.right}`}>
@@ -31,9 +36,24 @@ export default class Guide extends React.Component {
         </div>
         <div className={`${style.guide} ${style.left}`}>
           <p>
-            <a href="https://github.com/chvin/react-tetris" rel="noopener noreferrer" target="_blank" title={i18n.linkTitle[lan]}>
-              {i18n.about[lan]}
-            </a>
+            <a href="https://github.com/chvin/react-tetris" rel="noopener noreferrer" target="_blank" title={i18n.linkTitle[lan]}>{`${i18n.github[lan]}:`}</a><br />
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=chvin&repo=react-tetris&type=star&count=true"
+              frameBorder="0"
+              scrolling="0"
+              width="170px"
+              height="20px"
+              style={{ [transform]: 'scale(1.68)', [`${transform}Origin`]: 'center left' }}
+            />
+            <br />
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=chvin&repo=react-tetris&type=fork&count=true"
+              frameBorder="0"
+              scrolling="0"
+              width="170px"
+              height="20px"
+              style={{ [transform]: 'scale(1.68)', [`${transform}Origin`]: 'center left' }}
+            />
           </p>
           <div className={style.space}>SPACE</div>
         </div>

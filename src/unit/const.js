@@ -105,6 +105,8 @@ const lan = (() => {
   return l;
 })();
 
+document.title = i18n.data.title[lan];
+
 module.exports = {
   blockShape,
   origin,

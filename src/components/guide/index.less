@@ -22,8 +22,12 @@
     bottom: 5%;
   }
   p{
-    text-align: right;
+    text-align: left;
     margin-bottom: 350px;
+    opacity: .5;
+    iframe{
+      margin-top: 20px;
+    }
   }
 
   a{
@@ -32,6 +36,7 @@
     position:relative;
     z-index:1;
     cursor: alias;
+    text-decoration: none;
   }
   &.qr{
     left: auto;
@@ -39,25 +44,17 @@
     width: 190px;
     height:190px;
     opacity: .45;
-    float: right;
-    margin:0 0;
     padding:0 0 40px 40px;
+    text-align: right;
     &:hover{
       img{
-        transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
+        width: 100%;
+        height: 100%;
       }
     }
     img{
-      width: 100%;
-      height: 100%;
-      transform: scale(.2);
-      transform-origin: top right;
-      -moz-transform: scale(.2);
-      -moz-transform-origin: top right;
-      -ms-transform: scale(.2);
-      -ms-transform-origin: top right;
+      width: 38px;
+      height: 38px;
     }
   }
 

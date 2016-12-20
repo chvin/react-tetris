@@ -6,9 +6,13 @@
       "cn": "俄罗斯方块",
       "en": "T E T R I S"
     },
-    "about": {
-      "cn": "关于\"我\"",
-      "en": "About ME"
+    "github": {
+      "cn": "GitHub",
+      "en": "GitHub"
+    },
+    "linkTitle": {
+      "cn": "查看源代码",
+      "en": "View data source"
     },
     "QRCode":{
       "cn": "二维码",
@@ -17,10 +21,6 @@
     "QRNotice": {
       "cn": "扫一扫用手机玩",
       "en": "Scan QR code to play with a mobile phone"
-    },
-    "linkTitle": {
-      "cn": "使用React、Redux、Immutable编写「俄罗斯方块」",
-      "en": "Use Tetact, Redux, Immutable to coding \"Tetris\""
     },
     "titleCenter": {
       "cn": "俄罗斯方块<br />TETRIS",
