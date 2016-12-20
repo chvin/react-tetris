@@ -1,0 +1,133 @@
+body{
+  background: #009688;
+  padding: 0;margin:0;
+  font: 20px/1 "HanHei SC","PingHei","PingFang SC","STHeitiSC-Light","Helvetica Neue","Helvetica","Arial",sans-serif;
+  overflow: hidden;
+  cursor: default;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: 'liga', 'kern';
+  direction: ltr;
+  text-align: left;
+}
+
+:global{
+
+  .r{
+    float: right;
+  }
+  .l{
+    float: left;
+  }
+
+  .clear{
+    clear: both;
+  }
+
+
+
+  b {
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border: 2px solid #879372;
+    margin: 0 2px 2px 0;
+    float: left;
+    &:after{
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: #879372;
+      overflow: hidden;
+    }
+    &.c
+    {
+      border-color:#000;
+      &:after{
+        background:#000;
+      }
+    }
+    &.d{
+      border-color:#560000;
+      &:after{
+        background:#560000;
+      }
+    }
+  }
+
+  .bg{
+    background:url('//img.alicdn.com/tps/TB1qq7kNXXXXXacXFXXXXXXXXXX-400-186.png') no-repeat;
+    overflow:hidden;
+  }
+}
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.app{
+  width: 640px;
+  padding-top: 42px;
+  box-shadow: 0 0 10px #fff inset;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -480px 0 0 -320px;
+  background: #efcc19;
+}
+
+.rect{
+  width: 480px;
+  padding: 45px 0 35px;
+  border: #000 solid;
+  border-width: 0 10px 10px;
+  margin: 0 auto;
+  position: relative;
+  &.drop{ -webkit-transform:translateY(5px);transform:translateY(5px); }
+
+}
+
+.screen{
+  width: 390px;
+  height: 478px;
+  border: solid 5px;
+  border-color: #987f0f #fae36c #fae36c #987f0f;
+  margin: 0 auto;
+  position: relative;
+  .panel{
+    width: 380px;
+    height: 468px;
+    margin: 0 auto;
+    background: #9ead86;
+    padding: 8px;
+    border: 2px solid #494536;
+  }
+}
+
+.state {
+  width: 108px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  p {
+    line-height: 47px;
+    height: 57px;
+    padding: 10px 0 0;
+    white-space: nowrap;
+    clear: both;
+  }
+  .bottom {
+    position: absolute;
+    width: 114px;
+    top: 426px;
+    left: 0;
+  }
+}
