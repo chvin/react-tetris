@@ -165,7 +165,9 @@ export default connect(mapStateToProps)(App);
 ![网页音效进阶](https://img.alicdn.com/tps/TB1fYgzNXXXXXXnXpXXXXXXXXXX-633-358.png)
 
 `WAA` 是一套全新的相对独立的接口系统，对音频文件拥有更高的处理权限以及更专业的内置音频效果，是W3C的推荐接口，能专业处理“音速、音量、环境、音色可视化、高频、音向”等需求，下图介绍了WAA的使用流程。
+
 ![流程](https://img.alicdn.com/tps/TB1nBf1NXXXXXagapXXXXXXXXXX-520-371.png)
+
 其中Source代表一个音频源，Destination代表最终的输出，多个Source合成出了Destination。
 源代码：[/src/unit/music.js](https://github.com/chvin/react-tetris/blob/master/src/unit/music.js) 实现了ajax加载mp3，并转为WAA，控制播放的过程。
 
