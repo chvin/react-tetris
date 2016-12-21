@@ -10,19 +10,24 @@ Open [https://chvin.github.io/react-tetris/?lan=en](https://chvin.github.io/reac
 <hr />
 ### Interface preview
 ![Interface review](https://img.alicdn.com/tps/TB1Ag7CNXXXXXaoXXXXXXXXXXXX-320-483.gif)
+
 The normal speed of recording, experience smooth.
 <br />
 ### Responsive
 ![Responsive](https://img.alicdn.com/tps/TB1AdjZNXXXXXcCapXXXXXXXXXX-480-343.gif)
+
 Not only refers to the screen adaptation, `but the use of the keyboard in the PC, in the phone using the finger of the response type of operation`:
+
 ![phone](https://img.alicdn.com/tps/TB1kvJyOVXXXXbhaFXXXXXXXXXX-320-555.gif)
 <br />
 ### Data persistence
 ![Data persistence](https://img.alicdn.com/tps/TB1EY7cNXXXXXXraXXXXXXXXXXX-320-399.gif)
+
 Playing stand-alone games are most afraid of? Power outage. Store the state in localStorage by subscribing to `store.subscribe`, which records all states exactly. Web page off the refresh, the program crashes, the phone is dead, re-open the connection, you can continue.
 <br />
 ### Redux state preview
 ![Redux state preview](https://img.alicdn.com/tps/TB1hGQqNXXXXXX3XFXXXXXXXXXX-640-381.gif)
+
 Redux manages all the state that should be kept, which is a guarantee of persistence above.
 <br />
 <hr />
@@ -161,7 +166,9 @@ There are many different sound effects in the game, but in fact only a reference
 ![Web audio advanced](https://img.alicdn.com/tps/TB1fYgzNXXXXXXnXpXXXXXXXXXX-633-358.png)
 
 `WAA` is a new set of relatively independent interface system, the audio file has a higher processing power and more professional built-in audio effects, is the W3C recommended interface, can deal with professional "sound speed, volume, environment, sound visualization, High-frequency, sound to "and other needs, the following figure describes the use of WAA process.
+
 ![Process](https://img.alicdn.com/tps/TB1nBf1NXXXXXagapXXXXXXXXXX-520-371.png)
+
 Where Source represents an audio source, Destination represents the final output, and multiple Source compose the Destination.
 Source Code:[/src/unit/music.js](https://github.com/chvin/react-tetris/blob/master/src/unit/music.js) To achieve ajax loading mp3, and to WAA, control the playback process.
 

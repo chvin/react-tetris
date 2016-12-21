@@ -10,19 +10,24 @@ Please view [README-EN.md](https://github.com/chvin/react-tetris/blob/master/REA
 <hr />
 ### 效果预览
 ![效果预览](https://img.alicdn.com/tps/TB1Ag7CNXXXXXaoXXXXXXXXXXXX-320-483.gif)
+
 正常速度的录制，体验流畅。
 <br />
 ### 响应式
 ![响应式](https://img.alicdn.com/tps/TB1AdjZNXXXXXcCapXXXXXXXXXX-480-343.gif)
+
 不仅指屏幕的自适应，而是`在PC使用键盘、在手机使用手指的响应式操作`：
+
 ![手机](https://img.alicdn.com/tps/TB1kvJyOVXXXXbhaFXXXXXXXXXX-320-555.gif)
 <br />
 ### 数据持久化
 ![数据持久化](https://img.alicdn.com/tps/TB1EY7cNXXXXXXraXXXXXXXXXXX-320-399.gif)
+
 玩单机游戏最怕什么？断电。通过订阅 `store.subscribe`，将state储存在localStorage，精确记录所有状态。网页关了刷新了、程序崩溃了、手机没电了，重新打开连接，都可以继续。
 <br />
 ### Redux 状态预览
 ![Redux状态预览](https://img.alicdn.com/tps/TB1hGQqNXXXXXX3XFXXXXXXXXXX-640-381.gif)
+
 Redux设计管理了所有应存的状态，这是上面持久化的保证。
 <br />
 <hr />
