@@ -23,13 +23,13 @@ open [http://0.0.0.0:8080/](http://0.0.0.0:8080/)
 #### Mac:
 
 ```
-npm run MacBuild
+npm run build
 ```
 
 #### Windows:
 
 ```
-npm run WindowsBuild
+npm run windowsBuild
 ```
 
 
