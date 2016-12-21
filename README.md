@@ -110,7 +110,7 @@ Immutable.is(List1, List2); // true
 
 React 做性能优化时有一个`大招`，就是使用 `shouldComponentUpdate()`，但它默认返回 `true`，即始终会执行 `render()` 方法，后面做 Virtual DOM 比较。
 
-在使用原生属性时，为了得出shouldComponentUpdate正确的`true` or false`，不得不用deepCopy、deepCompare来算出答案，消耗的性能很不划算。而在有了Immutable之后，使用上面的方法对深层结构的比较就变的易如反掌。
+在使用原生属性时，为了得出shouldComponentUpdate正确的`true` or `false`，不得不用deepCopy、deepCompare来算出答案，消耗的性能很不划算。而在有了Immutable之后，使用上面的方法对深层结构的比较就变的易如反掌。
 
 对于「俄罗斯方块」，试想棋盘是一个`二维数组`，可以移动的方块则是`形状(也是二维数组)`+`坐标`。棋盘与方块的叠加则组成了最后的结果`Matrix`。游戏中上面的属性都由`Immutable`构建，通过它的比较方法，可以轻松写好`shouldComponentUpdate`。源代码：[/src/components/matrix/index.js#L35](https://github.com/chvin/react-tetris/blob/master/src/components/matrix/index.js#L35)
 
@@ -192,7 +192,7 @@ Web Audio Api 学习资料：
 	* 按下方向键水平移动和竖直移动的触发频率是不同的，游戏可以定义触发频率，代替原生的事件频率，源代码：[/src/unit/event.js](https://github.com/chvin/react-tetris/blob/master/src/unit/event.js) ；
 	* 左右移动可以 delay 掉落的速度，但在撞墙移动的时候 delay 的稍小；在速度为6级时 通过delay 会保证在一行内水平完整移动一次；
 	* 对按钮同时注册`touchstart`和`mousedown`事件，以供响应式游戏。当`touchstart`发生时，不会触发`mousedown`，而当`mousedown`发生时，由于鼠标移开事件元素可以不触发`mouseup`，将同时监听`mouseout` 模拟 mouseup`。源代码：[/src/components/keyboard/index.js](https://github.com/chvin/react-tetris/blob/master/src/components/keyboard/index.js)；
-	* 监听了 visibilitychange` 事件，当页面被隐藏\切换的时候，游戏将不会进行，切换回来将继续，这个`focus`状态也被写进了Redux中。所以当用手机玩来`电话`时，游戏进度将保存；PC开着游戏干别的也不会听到gameover，这有点像 `ios` 应用的切换。
+	* 监听了 `visibilitychange` 事件，当页面被隐藏\切换的时候，游戏将不会进行，切换回来将继续，这个`focus`状态也被写进了Redux中。所以当用手机玩来`电话`时，游戏进度将保存；PC开着游戏干别的也不会听到gameover，这有点像 `ios` 应用的切换。
 	* 在`任意`时刻刷新网页，（比如消除方块时、游戏结束时）也能还原当前状态；
 	* 游戏中唯一用到的图片是![image](https://img.alicdn.com/tps/TB1qq7kNXXXXXacXFXXXXXXXXXX-400-186.png)，其他都是CSS；
 	* 游戏兼容 Chrome、Firefox、IE9+、Edge等；
