@@ -173,10 +173,7 @@ export default connect(mapStateToProps)(App);
 
 `WAA` 在各个浏览器的最新2个版本下的支持情况（[CanIUse](http://caniuse.com/#search=webaudio)）
 
-| IE | Edge | Firefox | Chrome | Safari | iOS Safari | Android Browser |
-| --- | --- | --- | --- | --- | --- | --- |
-| <font color="red">8</font> | <font color="green">13</font> | <font color="green">50</font> | <font color="green">54</font> | <font color="green">10</font> | <font color="green">9.2</font> | <font color="red">4.4.4</font> |
-| <font color="red">11</font> | <font color="green">14</font> | <font color="green">51</font> | <font color="green">55 | <font color="green">TP</font> | <font color="green">9.3</font> | <font color="green">51</font> |
+![浏览器兼容](https://img.alicdn.com/tps/TB15z4VOVXXXXahaXXXXXXXXXXX-679-133.png)
 
 可以看到IE阵营与大部分安卓机不能使用，其他ok。
 

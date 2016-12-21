@@ -174,10 +174,7 @@ Source Code:[/src/unit/music.js](https://github.com/chvin/react-tetris/blob/mast
 
 `WAA` support in the latest 2 versions of each browser([CanIUse](http://caniuse.com/#search=webaudio))
 
-| IE | Edge | Firefox | Chrome | Safari | iOS Safari | Android Browser |
-| --- | --- | --- | --- | --- | --- | --- |
-| <font color="red">8</font> | <font color="green">13</font> | <font color="green">50</font> | <font color="green">54</font> | <font color="green">10</font> | <font color="green">9.2</font> | <font color="red">4.4.4</font> |
-| <font color="red">11</font> | <font color="green">14</font> | <font color="green">51</font> | <font color="green">55 | <font color="green">TP</font> | <font color="green">9.3</font> | <font color="green">51</font> |
+![browser compatibility](https://img.alicdn.com/tps/TB15z4VOVXXXXahaXXXXXXXXXXX-679-133.png)
 
 IE camp can be seen with most of the Andrews machine can not be used, the other ok.
 
