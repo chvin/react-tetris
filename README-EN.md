@@ -201,7 +201,7 @@ Web Audio Api learning materials:
 <br />
 <hr />
 ## 5. Experience in Development
-* For all `component` are written `shouldComponentUpdate`, on the phone's performance is relatively significant improvement. Large and medium-sized applications in the face of performance problems, write 'shouldComponentUpdate` will help you.
+* For all `component` are written `shouldComponentUpdate`, on the phone's performance is relatively significant improvement. Large and medium-sized applications in the face of performance problems, write `shouldComponentUpdate` will help you.
 * `Stateless Functional Components`([Stateless Functional Components](https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d#.xjqnbfx4e)) is no lifecycle. And because the above factors, all components need to life cycle shouldComponentUpdate, so no stateless components.
 * In the `webpack.config.js` devServer attribute to write `host: '0.0.0.0'`, can be used in the development of ip visit, not limited to localhost;
 * Redux in the `store` not only connect to the method passed to `container`, you can jump out of the component, in other documents out to do flow control (dispatch), the source code:[/src/control/states.js](https://github.com/chvin/react-tetris/blob/master/src/control/states.js)；

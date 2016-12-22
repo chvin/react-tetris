@@ -93,7 +93,7 @@ return oldArr.set(4, newValue);
 {a:1, b:2, c:3} === {a:1, b:2, c:3}; // false
 [1, 2, [3, 4]] === [1, 2, [3, 4]]; // false
 ```
-对于上面只能采用 deepCopy`、`deepCompare`来遍历比较，不仅麻烦且好性能。
+对于上面只能采用 `deepCopy`、`deepCompare`来遍历比较，不仅麻烦且好性能。
 
 我们感受来一下`Immutable`的做法！
 ```js
@@ -188,7 +188,7 @@ Web Audio Api 学习资料：
 * 技术：
 	* 按下方向键水平移动和竖直移动的触发频率是不同的，游戏可以定义触发频率，代替原生的事件频率，源代码：[/src/unit/event.js](https://github.com/chvin/react-tetris/blob/master/src/unit/event.js) ；
 	* 左右移动可以 delay 掉落的速度，但在撞墙移动的时候 delay 的稍小；在速度为6级时 通过delay 会保证在一行内水平完整移动一次；
-	* 对按钮同时注册`touchstart`和`mousedown`事件，以供响应式游戏。当`touchstart`发生时，不会触发`mousedown`，而当`mousedown`发生时，由于鼠标移开事件元素可以不触发`mouseup`，将同时监听`mouseout` 模拟 mouseup`。源代码：[/src/components/keyboard/index.js](https://github.com/chvin/react-tetris/blob/master/src/components/keyboard/index.js)；
+	* 对按钮同时注册`touchstart`和`mousedown`事件，以供响应式游戏。当`touchstart`发生时，不会触发`mousedown`，而当`mousedown`发生时，由于鼠标移开事件元素可以不触发`mouseup`，将同时监听`mouseout` 模拟 `mouseup`。源代码：[/src/components/keyboard/index.js](https://github.com/chvin/react-tetris/blob/master/src/components/keyboard/index.js)；
 	* 监听了 `visibilitychange` 事件，当页面被隐藏\切换的时候，游戏将不会进行，切换回来将继续，这个`focus`状态也被写进了Redux中。所以当用手机玩来`电话`时，游戏进度将保存；PC开着游戏干别的也不会听到gameover，这有点像 `ios` 应用的切换。
 	* 在`任意`时刻刷新网页，（比如消除方块时、游戏结束时）也能还原当前状态；
 	* 游戏中唯一用到的图片是![image](https://img.alicdn.com/tps/TB1qq7kNXXXXXacXFXXXXXXXXXX-400-186.png)，其他都是CSS；
@@ -202,11 +202,11 @@ Web Audio Api 学习资料：
 <hr />
 ## 5、开发中的经验梳理
 * 为所有的`component`都编写了`shouldComponentUpdate`，在手机上的性能相对有显著的提升。中大型应用在遇到性能上的问题的时候，写好shouldComponentUpdate 一定会帮你一把。
-* 无状态组件`（[Stateless Functional Components](https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d#.xjqnbfx4e)）是没有生命周期的。而因为上条因素，所有组件都需要生命周期 shouldComponentUpdate，所以未使用无状态组件。
-* 在 webpack.config.js` 中的 devServer属性写入`host: '0.0.0.0'`，可以在开发时用ip访问，不局限在localhost；
+* `无状态组件`（[Stateless Functional Components](https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d#.xjqnbfx4e)）是没有生命周期的。而因为上条因素，所有组件都需要生命周期 shouldComponentUpdate，所以未使用无状态组件。
+* 在 `webpack.config.js` 中的 devServer属性写入`host: '0.0.0.0'`，可以在开发时用ip访问，不局限在localhost；
 * redux中的`store`并非只能通过connect将方法传递给`container`，可以跳出组件，在别的文件拿出来做流程控制(dispatch)，源代码：[/src/control/states.js](https://github.com/chvin/react-tetris/blob/master/src/control/states.js)；
 * 用 react+redux 做持久化非常的方便，只要将redux状态储存，在每一个reduers做初始化的时候读取就好。
-* 通过配置 .eslintrc.js` 与 webpack.config.js` ，项目中集成了 ESLint` 检验。使用 ESLint 可以使编码按规范编写，有效地控制代码质量。不符规范的代码在开发时（或build时）都能通过IDE与控制台发现错误。 参考：[Airbnb: React使用规范](https://github.com/dwqs/react-style-guide)；
+* 通过配置 .eslintrc.js` 与 webpack.config.js` ，项目中集成了 `ESLint` 检验。使用 ESLint 可以使编码按规范编写，有效地控制代码质量。不符规范的代码在开发时（或build时）都能通过IDE与控制台发现错误。 参考：[Airbnb: React使用规范](https://github.com/dwqs/react-style-guide)；
 
 <br />
 <hr />
