@@ -29,6 +29,7 @@
     "babel-loader": "^6.2.4",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.16.0",
     "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.23.1",
     "eslint": "^3.3.1",
