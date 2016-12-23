@@ -35,3 +35,12 @@ jspm_packages
 .node_repl_history
 
 # Created by .ignore support plugin (hsz.mobi)
+.idea
+.idea/workspace.xml
+.idea/encodings.xml
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/react-tetris.iml
+.idea/vcs.xml
+.idea/watcherTasks.xml
