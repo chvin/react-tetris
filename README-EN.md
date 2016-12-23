@@ -1,7 +1,7 @@
 ### 中文介绍
 请查看 [README.md](https://github.com/chvin/react-tetris/blob/master/README.md)
 <hr />
-## Use "react, redux, immutable" to coding "Tetris".
+## Use React, Redux, Immutable to code Tetris.
 <hr />
 Tetris is the classic programming language that has always been enthusiastically implemented in various languages. There are many versions of Javascript, and using React to do Tetris has become my goal.
 
