@@ -152,7 +152,7 @@ const states = {
   clearLines: (matrix, lines) => {
     const state = store.getState();
     let newMatrix = matrix;
-    lines.forEach(n => {
+    lines.forEach((n) => {
       newMatrix = newMatrix.splice(n, 1);
       newMatrix = newMatrix.unshift(List(blankLine));
     });

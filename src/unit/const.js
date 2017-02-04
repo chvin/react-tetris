@@ -88,7 +88,7 @@ const maxPoint = 999999;
 const transform = (function () {
   const trans = ['transform', 'webkitTransform', 'msTransform', 'mozTransform', 'oTransform'];
   const body = document.body;
-  return trans.filter((e) => body.style[e] !== undefined)[0];
+  return trans.filter(e => body.style[e] !== undefined)[0];
 }());
 
 const eachLines = 20; // 每消除eachLines行, 增加速度

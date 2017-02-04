@@ -38,11 +38,11 @@ export default class Matrix extends React.Component {
       immutable.is(nextProps.matrix, props.matrix) &&
       immutable.is(
         (nextProps.cur && nextProps.cur.shape),
-        (props.cur && props.cur.shape)
+        (props.cur && props.cur.shape),
       ) &&
       immutable.is(
         (nextProps.cur && nextProps.cur.xy),
-        (props.cur && props.cur.xy)
+        (props.cur && props.cur.xy),
       )
     ) || this.state.clearLines
     || this.state.isOver;
