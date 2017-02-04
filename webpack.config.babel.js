@@ -16,14 +16,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
+        test: /\.jsx?$/,
+        exclude: /(node_modules|build|server)/,
+        include: path.resolve(process.cwd(), 'src'),
+        loaders: ['babel-loader'],
       },
       {
         test: /\.(?:png|jpg|gif)$/,

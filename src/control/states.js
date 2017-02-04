@@ -10,10 +10,10 @@ const getStartMatrix = (startLines) => { // 生成startLines
   const getLine = (min, max) => { // 返回标亮个数在min~max之间一行方块, (包含边界)
     const count = parseInt((((max - min) + 1) * Math.random()) + min, 10);
     const line = [];
-    for (let i = 0; i < count; i++) { // 插入高亮
+    for (let i = 0; i < count; i += 1) { // 插入高亮
       line.push(1);
     }
-    for (let i = 0, len = 10 - count; i < len; i++) { // 在随机位置插入灰色
+    for (let i = 0, len = 10 - count; i < len; i += 1) { // 在随机位置插入灰色
       const index = parseInt(((line.length + 1) * Math.random()), 10);
       line.splice(index, 0, 0);
     }
@@ -22,7 +22,7 @@ const getStartMatrix = (startLines) => { // 生成startLines
   };
   let startMatrix = List([]);
 
-  for (let i = 0; i < startLines; i++) {
+  for (let i = 0; i < startLines; i += 1) {
     if (i <= 2) { // 0-3
       startMatrix = startMatrix.push(getLine(5, 8));
     } else if (i <= 6) { // 4-6
@@ -31,7 +31,7 @@ const getStartMatrix = (startLines) => { // 生成startLines
       startMatrix = startMatrix.push(getLine(3, 9));
     }
   }
-  for (let i = 0, len = 20 - startLines; i < len; i++) { // 插入上部分的灰色
+  for (let i = 0, len = 20 - startLines; i < len; i += 1) { // 插入上部分的灰色
     startMatrix = startMatrix.unshift(List(blankLine));
   }
   return startMatrix;

@@ -135,7 +135,7 @@ export default class Matrix extends React.Component {
       });
     };
 
-    for (let i = 0; i <= 40; i++) {
+    for (let i = 0; i <= 40; i += 1) {
       t(exLine.bind(null, i), 40 * (i + 1));
     }
   }

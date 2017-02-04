@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "使用React、Redux、Immutable编写「俄罗斯方块」。Use Tetact, Redux, Immutable to coding \"Tetris\".",
   "scripts": {
-    "start": "webpack-dev-server --progress --open",
-    "build": "rm -rf ./build/* && NODE_ENV=production webpack --config ./webpack.config.production.babel.js --progress && ls ./build",
-    "windowsBuild": "rm -rf ./build/* && set NODE_ENV=production && webpack --config ./webpack.config.production.babel.js --progress && ls ./build"
+    "start": "eslint --ignore-path .gitignore --fix . && webpack-dev-server --progress --open ",
+    "build": "rm -rf ./build/* && NODE_ENV=production && webpack -p --config ./webpack.config.production.babel.js --progress && ls ./build",
+    "windowsBuild": "rm -rf ./build/* && NODE_ENV=production && webpack -p --config ./webpack.config.production.babel.js --progress && ls ./build"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/chvin/react-tetris#readme",
   "devDependencies": {
     "babel-core": "^6.22.1",
+    "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.10",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-preset-es2015": "^6.22.0",

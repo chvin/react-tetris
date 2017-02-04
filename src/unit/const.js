@@ -53,7 +53,7 @@ const blankLine = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 const blankMatrix = (() => {
   const matrix = [];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 20; i += 1) {
     matrix.push(List(blankLine));
   }
   return List(matrix);

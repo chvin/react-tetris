@@ -20,14 +20,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
+        test: /\.jsx?$/,
+        exclude: /(node_modules|build|server)/,
+        include: path.resolve(process.cwd(), 'src'),
+        loaders: ['babel-loader'],
       },
       {
         test: /\.(?:png|jpg|gif)$/,
@@ -74,9 +70,7 @@ module.exports = {
       },
       inject: true,
     }),
-    new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin(`css-${version}.css`),
-    new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"',
     }),
