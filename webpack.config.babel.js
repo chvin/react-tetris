@@ -1,41 +1,50 @@
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+import path from 'path';
+import webpack from 'webpack';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
-var webpack = require('webpack');
 
 // dev环境配置
 module.exports = {
   devtool: 'eval-source-map', // 生成source-map追踪js错误
-  entry: __dirname + '/src/index.js', // 程序入口
+  entry: [
+    path.join(process.cwd(), './src/index.js'), // 程序入口
+  ],
   output: {
-    path: __dirname + '/server',
+    path: path.resolve(__dirname, './server'),
     filename: 'app.js',
   },
-  eslint: {
-    configFile: __dirname + '/.eslintrc.js',
-  },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.(json)$/,
+        test: /\.(js|jsx)$/,
+        loader: 'eslint-loader',
         exclude: /node_modules/,
-        loader: 'json',
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel!eslint-loader',
+        loader: 'babel-loader',
       },
       {
         test: /\.(?:png|jpg|gif)$/,
-        loader: 'url',
+        loader: [
+          'url-loader',
+        ],
       },
       {
         test: /\.css/,
-        loader: 'style!css?localIdentName=[local]-[hash:base64:5]',
+        loaders: [
+          'style-loader',
+          'css-loader?localIdentName=[local]-[hash:base64:5]',
+        ],
       },
       {
         test: /\.less/,
-        loader: 'style!css?modules&localIdentName=[local]-[hash:base64:5]!less',
+        loaders: [
+          'style-loader',
+          'css-loader?modules&localIdentName=[local]-[hash:base64:5]',
+          'less-loader',
+        ],
       },
     ],
   },
@@ -48,7 +57,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: './server',
-    colors: true,
     historyApiFallback: false,
     port: 8080, // defaults to "8080"
     hot: true, // Hot Module Replacement
