@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import style from './index.less';
 
-const render = (data) => (
+const render = data => (
   <div className={style.number}>
     {
       data.map((e, k) => (
@@ -12,7 +12,7 @@ const render = (data) => (
   </div>
 );
 
-const formate = (num) => (
+const formate = num => (
   num < 10 ? `0${num}`.split('') : `${num}`.split('')
 );
 
@@ -70,7 +70,7 @@ export default class Number extends React.Component {
     }
 
     const num = `${this.props.number}`.split('');
-    for (let i = 0, len = this.props.length - num.length; i < len; i++) {
+    for (let i = 0, len = this.props.length - num.length; i < len; i += 1) {
       num.unshift('n');
     }
     return (render(num));

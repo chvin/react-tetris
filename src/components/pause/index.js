@@ -45,7 +45,7 @@ export default class Pause extends React.Component {
             bg: true,
             [style.pause]: true,
             [style.c]: this.state.showPause,
-          }
+          },
         )}
       />
     );

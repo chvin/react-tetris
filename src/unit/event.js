@@ -2,7 +2,7 @@ const eventName = {};
 
 const down = (o) => { // 键盘、手指按下
   const keys = Object.keys(eventName);
-  keys.forEach(i => {
+  keys.forEach((i) => {
     clearTimeout(eventName[i]);
     eventName[i] = null;
   });
@@ -39,7 +39,7 @@ const up = (o) => { // 键盘、手指松开
 
 const clearAll = () => {
   const keys = Object.keys(eventName);
-  keys.forEach(i => {
+  keys.forEach((i) => {
     clearTimeout(eventName[i]);
     eventName[i] = null;
   });

@@ -141,7 +141,7 @@ App.propTypes = {
   keyboard: React.PropTypes.object.isRequired,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   pause: state.get('pause'),
   music: state.get('music'),
   matrix: state.get('matrix'),
