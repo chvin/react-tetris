@@ -59,7 +59,7 @@ var devPlugins =  [
   new webpack.NoErrorsPlugin(),
   // 打开浏览器页面
   new OpenBrowserPlugin({
-    url: 'http://0.0.0.0:8080/'
+    url: 'http://127.0.0.1:8080/'
   }),
   // css打包
   new ExtractTextPlugin('css.css', {

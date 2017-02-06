@@ -226,7 +226,7 @@ npm install
 ```
 npm start
 ```
-浏览自动打开 [http://0.0.0.0:8080/](http://0.0.0.0:8080/)
+浏览自动打开 [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
 ### 多语言
 在 [i18n.json](https://github.com/chvin/react-tetris/blob/master/i18n.json) 配置多语言环境，使用"lan"参数匹配语言如：`https://chvin.github.io/react-tetris/?lan=en`
 ### 打包编译
