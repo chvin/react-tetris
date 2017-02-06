@@ -226,17 +226,12 @@ npm install
 ```
 npm start
 ```
-open [http://0.0.0.0:8080/](http://0.0.0.0:8080/)
+The browser will go to [http://0.0.0.0:8080/](http://0.0.0.0:8080/)
 ### multi-language
 In the [i18n.json](https://github.com/chvin/react-tetris/blob/master/i18n.json) configuration in the multi-language environment, the use of "lan" parameter matching language such as: `https://chvin.github.io/react-tetris/?lan=en`
 ### Build
-* Mac:
 ```
 npm run build
-```
-* Windows:
-```
-npm run windowsBuild
 ```
 
 Build the results in the build folder.
