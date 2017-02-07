@@ -3,7 +3,7 @@
 <hr />
 ## Use React, Redux, Immutable to code Tetris.
 <hr />
-Tetris is the classic programming language that has always been enthusiastically implemented in various languages. There are many versions of Javascript, and using React to do Tetris has become my goal.
+Tetris is a classic game that has always been enthusiastically implemented in various languages. There are many versions of Javascript, and using React to do Tetris has become my goal.
 
 Open [https://chvin.github.io/react-tetris/?lan=en](https://chvin.github.io/react-tetris/?lan=en) to play!
 
@@ -205,7 +205,7 @@ Web Audio Api learning materials:
 * `Stateless Functional Components`([Stateless Functional Components](https://medium.com/@joshblack/stateless-components-in-react-0-14-f9798f8b992d#.xjqnbfx4e)) is no lifecycle. And because the above factors, all components need to life cycle shouldComponentUpdate, so no stateless components.
 * In the `webpack.config.js` devServer attribute to write `host: '0.0.0.0'`, can be used in the development of ip visit, not limited to localhost;
 * Redux in the `store` not only connect to the method passed to `container`, you can jump out of the component, in other documents out to do flow control (dispatch), the source code:[/src/control/states.js](https://github.com/chvin/react-tetris/blob/master/src/control/states.js)；
-* React + Redux do with the persistence is very convenient, as long as the redux state of storage, reduers do read in each of the initialization time.
+* React + Redux do with the persistence is very convenient, as long as the redux state of storage, reducers do read in each of the initialization time.
 * By configuring `.eslintrc.js` and `webpack.config.js`, the `ESLint` test is integrated in the project. Using ESLint allows coding to be written to specifications, effectively controlling code quality. Code that does not conform to the specifications can be found through the IDE and the console at development time (or build time). reference:[Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react)；
 
 <br />
