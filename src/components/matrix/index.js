@@ -32,7 +32,7 @@ export default class Matrix extends React.Component {
       this.over(nextProps);
     }
   }
-  shouldComponentUpdate(nextProps = {}) { // 使用Immutable 比较两个List 是否相等
+  shouldComponentUpdate(nextProps = {}) { // 使用 Immutable 比较两个 List 是否相等
     const props = this.props;
     return !(
       immutable.is(nextProps.matrix, props.matrix) &&

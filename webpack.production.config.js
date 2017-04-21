@@ -13,5 +13,5 @@ module.exports = {
     loaders: config.loaders
   },
   plugins: config.productionPlugins,
-  postcss: config.postcss
+  postcss: config.postcss,
 };

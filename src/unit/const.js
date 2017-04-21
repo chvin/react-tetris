@@ -91,7 +91,7 @@ const transform = (function () {
   return trans.filter((e) => body.style[e] !== undefined)[0];
 }());
 
-const eachLines = 20; // 每消除eachLines行, 增加速度
+const eachLines = 20; // 每消除 eachLines 行, 增加速度
 
 const getParam = (param) => { // 获取浏览器参数
   const r = new RegExp(`\\?(?:.+&)?${param}=(.*?)(?:&.*)?$`);

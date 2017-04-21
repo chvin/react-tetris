@@ -17,11 +17,11 @@ var output =  {
   chunkFilename: 'chunk/[name].[chunkhash:5].chunk.js',
 };
 
-// 生成source-map追踪js错误
+// 生成 source-map 追踪 js 错误
 var devtool = 'source-map';
 
 // eslint
-var eslint =  {
+var eslint = {
   configFile: __dirname + '/.eslintrc.js',
 }
 
@@ -43,7 +43,9 @@ var loaders = [
     },
     {
       test: /\.less/,
-      loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[hash:base64:4]!postcss!less'),
+      loader: ExtractTextPlugin.extract('style',
+                                        'css?modules&localIdentName=[name]__[local]___' +
+                                        '[hash:base64:5]&camelCase!postcss!less'),
     }
 ];
 

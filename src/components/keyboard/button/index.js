@@ -7,6 +7,7 @@ export default class Button extends React.Component {
   shouldComponentUpdate(nextProps) {
     return nextProps.active !== this.props.active;
   }
+
   render() {
     const {
       active, color, size, top, left, label, position, arrow,

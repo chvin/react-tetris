@@ -1,4 +1,4 @@
-.background(@from, @to){
+.background(@from, @to) {
   background: (@from + @to)/2;
   background: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
   background: -moz-linear-gradient(top,  @from,  @from);
@@ -10,27 +10,27 @@
   position: absolute;
   left: 115%;
   right: 115%;
-  text-align:center;
+  text-align: center;
   line-height: 1;
   white-space: nowrap;
-  &.right{
+  &.right {
     right: auto;
     bottom: 5%;
   }
-  &.left{
+  &.left {
     left: auto;
     bottom: 5%;
   }
-  p{
+  p {
     text-align: left;
     margin-bottom: 350px;
     opacity: .5;
-    iframe{
+    iframe {
       margin-top: 20px;
     }
   }
 
-  a{
+  a {
     color:#005850;
     font-size:30px;
     position:relative;
@@ -38,7 +38,7 @@
     cursor: alias;
     text-decoration: none;
   }
-  &.qr{
+  &.qr {
     left: auto;
     top: 5%;
     width: 190px;
@@ -46,19 +46,19 @@
     opacity: .45;
     padding:0 0 40px 40px;
     text-align: right;
-    &:hover{
-      img{
+    &:hover {
+      img {
         width: 100%;
         height: 100%;
       }
     }
-    img{
+    img {
       width: 38px;
       height: 38px;
     }
   }
 
-  &>div{
+  &>div {
     width: 100px;
     height: 54px;
     background: /*#404040*/#364d4b;
@@ -78,7 +78,7 @@
       left: 50%;
       margin: -9px 0 0 -6px;
     }
-    &:before, &:after{
+    &:before, &:after {
       content: '';
       display: block;
       width: 100%;
@@ -89,19 +89,19 @@
       border-radius:4px;
       box-shadow: 0 5px 10px rgba(255, 255, 255, .15) inset;
     }
-    &:before{
+    &:before {
       box-shadow: 0 -5px 10px rgba(0, 0, 0, .15) inset;
     }
   }
-  .up{
+  .up {
     height: 60px;
     display:block;
     margin:0 auto 2px;
   }
-  .down{
+  .down {
     margin:0 10px;
   }
-  .space{
+  .space {
     left: auto;
     bottom: 5%;
     height: 80px;

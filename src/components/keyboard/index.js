@@ -8,9 +8,9 @@ import { i18n, lan } from '../../unit/const';
 
 export default class Keyboard extends React.Component {
   componentDidMount() {
-    const touchEventCatch = {}; // 对于手机操作, 触发了touchstart, 将作出记录, 不再触发后面的mouse事件
+    const touchEventCatch = {}; // 对于手机操作, 触发了 touchstart, 将作出记录, 不再触发后面的 mouse 事件
 
-    // 在鼠标触发mousedown时, 移除元素时可以不触发mouseup, 这里做一个兼容, 以mouseout模拟mouseup
+    // 在鼠标触发 mousedown 时, 移除元素时可以不触发 mouseup, 这里做一个兼容, 以 mouseout 模拟 mouseup
     const mouseDownEventCatch = {};
     document.addEventListener('touchstart', (e) => {
       if (e.preventDefault) {

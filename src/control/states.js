@@ -6,8 +6,8 @@ import { speeds, blankLine, blankMatrix, clearPoints, eachLines } from '../unit/
 import { music } from '../unit/music';
 
 
-const getStartMatrix = (startLines) => { // 生成startLines
-  const getLine = (min, max) => { // 返回标亮个数在min~max之间一行方块, (包含边界)
+const getStartMatrix = (startLines) => { // 生成 startLines
+  const getLine = (min, max) => { // 返回标亮个数在 min ~ max 之间一行方块, (包含边界)
     const count = parseInt((((max - min) + 1) * Math.random()) + min, 10);
     const line = [];
     for (let i = 0; i < count; i++) { // 插入高亮
@@ -38,7 +38,7 @@ const getStartMatrix = (startLines) => { // 生成startLines
 };
 
 const states = {
-  // 自动下落setTimeout变量
+  // 自动下落 setTimeout 变量
   fallInterval: null,
 
   // 游戏开始
