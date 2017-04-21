@@ -7,7 +7,7 @@ import './unit/const';
 import './control';
 import { subscribeRecord } from './unit';
 
-subscribeRecord(store); // 将更新的状态记录到localStorage
+subscribeRecord(store); // 将更新的状态记录到 localStorage
 
 render(
   <Provider store={store}>
@@ -15,4 +15,3 @@ render(
   </Provider>
     , document.getElementById('root')
 );
-
