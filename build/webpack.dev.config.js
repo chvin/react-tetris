@@ -6,15 +6,15 @@ const webpackBase = require('./webpack.base.config');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
-for (const name of Object.keys(webpackBase.entry)) {
-  webpackBase.entry[name] = ['./build/dev-client']
-    .concat(webpackBase.entry[name]);
-}
+/* eslint-disable array-callback-return */
+Object.keys(webpackBase.entry).map((name) => {
+  webpackBase.entry[name] = ['./build/dev-client'].concat(webpackBase.entry[name]);
+});
 
 module.exports = merge(webpackBase, {
   module: {
     rules: utils.styleLoaders({
-      sourceMap: config.dev.cssSourceMap
+      sourceMap: config.dev.cssSourceMap,
     }),
   },
   devtool: '#cheap-module-eval-source-map',

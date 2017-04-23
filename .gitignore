@@ -46,3 +46,4 @@ jspm_packages
 .idea/watcherTasks.xml
 
 /.vscode/
+/dist/

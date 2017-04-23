@@ -1,6 +1,7 @@
 
 const config = require('../config');
 const utils = require('./utils');
+const eslintFormatter = require('eslint-friendly-formatter');
 
 module.exports = {
   entry: {
@@ -24,7 +25,7 @@ module.exports = {
         enforce: 'pre',
         include: [utils.resolve('src'), utils.resolve('test')],
         options: {
-          formatter: require('eslint-friendly-formatter'),
+          formatter: eslintFormatter,
         },
       },
       {

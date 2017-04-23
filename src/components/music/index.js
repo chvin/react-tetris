@@ -14,8 +14,8 @@ export default class Music extends React.Component {
             bg: true,
             [style.music]: true,
             [style.c]: !this.props.data,
-          }
-        )}
+          })
+        }
       />
     );
   }

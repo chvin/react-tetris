@@ -53,8 +53,9 @@ const blankLine = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 const blankMatrix = (() => {
   const matrix = [];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 20;) {
     matrix.push(List(blankLine));
+    i += 1;
   }
   return List(matrix);
 })();
@@ -88,7 +89,7 @@ const maxPoint = 999999;
 const transform = (function () {
   const trans = ['transform', 'webkitTransform', 'msTransform', 'mozTransform', 'oTransform'];
   const body = document.body;
-  return trans.filter((e) => body.style[e] !== undefined)[0];
+  return trans.filter(e => body.style[e] !== undefined)[0];
 }());
 
 const eachLines = 20; // 每消除 eachLines 行, 增加速度

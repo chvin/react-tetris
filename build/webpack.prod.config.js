@@ -3,11 +3,13 @@ const utils = require('./utils');
 const webpack = require('webpack');
 const config = require('../config');
 const merge = require('webpack-merge');
-const baseWebpackCfg = require('./webpack.base');
+const baseWebpackCfg = require('./webpack.base.config');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+const compressionPlugin = require('compression-webpack-plugin');
+const bundleAnalyzer = require('webpack-bundle-analyzer');
 
 
 const env = process.env.NODE_ENV === 'testing' ?
@@ -57,15 +59,13 @@ const webpackConfig = merge(baseWebpackCfg, {
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks(module, count) {
+      minChunks(module/* , count */) {
         // any required modules inside node_modules are extracted to vendor
         return (
           module.resource &&
           /\.js$/.test(module.resource) &&
           module.resource.indexOf(
-            utils.resolve('node_modules')
-          ) === 0
-        );
+            utils.resolve('node_modules')) === 0);
       },
     }),
     // extract webpack runtime and module manifest to its own file in order to
@@ -85,23 +85,21 @@ const webpackConfig = merge(baseWebpackCfg, {
 });
 
 if (config.build.productionGzip) {
-  const CompressionWebpackPlugin = require('compression-webpack-plugin');
+  const CompressionWebpackPlugin = compressionPlugin;
 
   webpackConfig.plugins.push(
     new CompressionWebpackPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
       test: new RegExp(
-        `\\.(${config.build.productionGzipExtensions.join('|')})$`
-      ),
+        `\\.(${config.build.productionGzipExtensions.join('|')})$`),
       threshold: 10240,
       minRatio: 0.8,
-    })
-  );
+    }));
 }
 
 if (config.build.bundleAnalyzerReport) {
-  const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+  const BundleAnalyzerPlugin = bundleAnalyzer.BundleAnalyzerPlugin;
 
   webpackConfig.plugins.push(new BundleAnalyzerPlugin());
 }

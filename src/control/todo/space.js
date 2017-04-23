@@ -27,7 +27,7 @@ const down = (store) => {
         let bottom = cur.fall(index);
         while (want(bottom, state.get('matrix'))) {
           bottom = cur.fall(index);
-          index++;
+          index += 1;
         }
         let matrix = state.get('matrix');
         bottom = cur.fall(index - 2);
