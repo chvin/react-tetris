@@ -1,3 +1,27 @@
 {
-  "presets": ["react", "es2015"]
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "> 10%",
+            "last 2 versions"
+          ]
+        },
+        "modules": false
+      }
+    ],
+    "react",
+    "stage-2"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "env",
+        "stage-2"
+      ],
+      "sourceMaps": "inline"
+    }
+  }
 }

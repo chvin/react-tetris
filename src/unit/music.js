@@ -27,7 +27,7 @@ const music = {};
   req.responseType = 'arraybuffer';
 
   req.onload = () => {
-    context.decodeAudioData(req.response, (buf) => { // 将拿到的audio解码转为buffer
+    context.decodeAudioData(req.response, (buf) => { // 将拿到的 audio 解码转为buffer
       const getSource = () => { // 创建source源。
         const source = context.createBufferSource();
         source.buffer = buf;

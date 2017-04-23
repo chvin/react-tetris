@@ -88,7 +88,7 @@ export default class Logo extends React.Component {
         this.setState({ style: style[m + 4] });
         set(() => {
           this.setState({ style: style[m + 3] });
-          count++;
+          count += 1;
           if (count === 10 || count === 20 || count === 30) {
             m = m === 'r' ? 'l' : 'r';
           }
@@ -142,7 +142,7 @@ export default class Logo extends React.Component {
 }
 
 Logo.propTypes = {
-  cur: React.PropTypes.bool,
+  cur: React.PropTypes.bool.isRequired,
   reset: React.PropTypes.bool.isRequired,
 };
 Logo.statics = {

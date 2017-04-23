@@ -32,20 +32,18 @@ export default class Matrix extends React.Component {
       this.over(nextProps);
     }
   }
-  shouldComponentUpdate(nextProps = {}) { // 使用Immutable 比较两个List 是否相等
+  shouldComponentUpdate(nextProps = {}) { // 使用 Immutable 比较两个 List 是否相等
     const props = this.props;
     return !(
       immutable.is(nextProps.matrix, props.matrix) &&
       immutable.is(
         (nextProps.cur && nextProps.cur.shape),
-        (props.cur && props.cur.shape)
-      ) &&
+        (props.cur && props.cur.shape)) &&
       immutable.is(
         (nextProps.cur && nextProps.cur.xy),
-        (props.cur && props.cur.xy)
-      )
-    ) || this.state.clearLines
-    || this.state.isOver;
+        (props.cur && props.cur.xy))) ||
+        this.state.clearLines ||
+        this.state.isOver;
   }
   getResult(props = this.props) {
     const cur = props.cur;
@@ -135,8 +133,9 @@ export default class Matrix extends React.Component {
       });
     };
 
-    for (let i = 0; i <= 40; i++) {
+    for (let i = 0; i <= 40;) {
       t(exLine.bind(null, i), 40 * (i + 1));
+      i += 1;
     }
   }
   render() {
@@ -168,4 +167,5 @@ export default class Matrix extends React.Component {
 Matrix.propTypes = {
   matrix: React.PropTypes.object.isRequired,
   cur: React.PropTypes.object,
+  reset: React.PropTypes.bool.isRequired,
 };

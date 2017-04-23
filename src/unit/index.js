@@ -7,7 +7,7 @@ const hiddenProperty = (() => { // document[hiddenProperty] 可以判断页面�
     'mozHidden',
     'msHidden',
   ];
-  names = names.filter((e) => (e in document));
+  names = names.filter(e => (e in document));
   return names.length > 0 ? names[0] : false;
 })();
 
