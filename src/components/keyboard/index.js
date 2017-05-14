@@ -1,5 +1,7 @@
 import React from 'react';
 import Immutable from 'immutable';
+import propTypes from 'prop-types';
+
 import style from './index.less';
 import Button from './button';
 import store from '../../store';
@@ -149,6 +151,6 @@ export default class Keyboard extends React.Component {
 }
 
 Keyboard.propTypes = {
-  filling: React.PropTypes.number.isRequired,
-  keyboard: React.PropTypes.object.isRequired,
+  filling: propTypes.number.isRequired,
+  keyboard: propTypes.object.isRequired,
 };

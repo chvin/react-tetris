@@ -1,5 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
+import propTypes from 'prop-types';
+
 import style from './index.less';
 
 const render = (data) => (
@@ -83,9 +85,9 @@ Number.statics = {
 };
 
 Number.propTypes = {
-  number: React.PropTypes.number,
-  length: React.PropTypes.number,
-  time: React.PropTypes.bool,
+  number: propTypes.number,
+  length: propTypes.number,
+  time: propTypes.bool,
 };
 
 Number.defaultProps = {

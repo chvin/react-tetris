@@ -1,5 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
+import propTypes from 'prop-types';
+
 import style from './index.less';
 
 export default class Pause extends React.Component {
@@ -57,7 +59,7 @@ Pause.statics = {
 };
 
 Pause.propTypes = {
-  data: React.PropTypes.bool.isRequired,
+  data: propTypes.bool.isRequired,
 };
 
 Pause.defaultProps = {

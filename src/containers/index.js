@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
+import propTypes from 'prop-types';
 
 import style from './index.less';
 
@@ -124,21 +125,21 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  music: React.PropTypes.bool.isRequired,
-  pause: React.PropTypes.bool.isRequired,
-  matrix: React.PropTypes.object.isRequired,
-  next: React.PropTypes.string.isRequired,
-  cur: React.PropTypes.object,
-  dispatch: React.PropTypes.func.isRequired,
-  speedStart: React.PropTypes.number.isRequired,
-  speedRun: React.PropTypes.number.isRequired,
-  startLines: React.PropTypes.number.isRequired,
-  clearLines: React.PropTypes.number.isRequired,
-  points: React.PropTypes.number.isRequired,
-  max: React.PropTypes.number.isRequired,
-  reset: React.PropTypes.bool.isRequired,
-  drop: React.PropTypes.bool.isRequired,
-  keyboard: React.PropTypes.object.isRequired,
+  music: propTypes.bool.isRequired,
+  pause: propTypes.bool.isRequired,
+  matrix: propTypes.object.isRequired,
+  next: propTypes.string.isRequired,
+  cur: propTypes.object,
+  dispatch: propTypes.func.isRequired,
+  speedStart: propTypes.number.isRequired,
+  speedRun: propTypes.number.isRequired,
+  startLines: propTypes.number.isRequired,
+  clearLines: propTypes.number.isRequired,
+  points: propTypes.number.isRequired,
+  max: propTypes.number.isRequired,
+  reset: propTypes.bool.isRequired,
+  drop: propTypes.bool.isRequired,
+  keyboard: propTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({

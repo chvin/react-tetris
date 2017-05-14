@@ -1,5 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
+import propTypes from 'prop-types';
+
 import style from './index.less';
 import { i18n, lan } from '../../unit/const';
 
@@ -142,8 +144,8 @@ export default class Logo extends React.Component {
 }
 
 Logo.propTypes = {
-  cur: React.PropTypes.bool,
-  reset: React.PropTypes.bool.isRequired,
+  cur: propTypes.bool,
+  reset: propTypes.bool.isRequired,
 };
 Logo.statics = {
   timeout: null,

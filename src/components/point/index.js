@@ -1,4 +1,6 @@
 import React from 'react';
+import propTypes from 'prop-types';
+
 import Number from '../number';
 import { i18n, lan } from '../../unit/const';
 
@@ -71,8 +73,8 @@ Point.statics = {
 };
 
 Point.propTypes = {
-  cur: React.PropTypes.bool,
-  max: React.PropTypes.number.isRequired,
-  point: React.PropTypes.number.isRequired,
+  cur: propTypes.bool,
+  max: propTypes.number.isRequired,
+  point: propTypes.number.isRequired,
 };
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
+import propTypes from 'prop-types';
+
 import style from './index.less';
 
 export default class Music extends React.Component {
@@ -22,5 +24,5 @@ export default class Music extends React.Component {
 }
 
 Music.propTypes = {
-  data: React.PropTypes.bool.isRequired,
+  data: propTypes.bool.isRequired,
 };

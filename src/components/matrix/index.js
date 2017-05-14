@@ -1,6 +1,8 @@
 import React from 'react';
 import immutable, { List } from 'immutable';
 import classnames from 'classnames';
+import propTypes from 'prop-types';
+
 import style from './index.less';
 import { isClear } from '../../unit/';
 import { fillLine, blankLine } from '../../unit/const';
@@ -166,7 +168,7 @@ export default class Matrix extends React.Component {
 }
 
 Matrix.propTypes = {
-  matrix: React.PropTypes.object.isRequired,
-  cur: React.PropTypes.object,
-  reset: React.PropTypes.bool.isRequired,
+  matrix: propTypes.object.isRequired,
+  cur: propTypes.object,
+  reset: propTypes.bool.isRequired,
 };

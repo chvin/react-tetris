@@ -1,4 +1,6 @@
 import React from 'react';
+import propTypes from 'prop-types';
+
 import style from './index.less';
 import { blockShape } from '../../unit/const';
 
@@ -65,5 +67,5 @@ export default class Next extends React.Component {
 }
 
 Next.propTypes = {
-  data: React.PropTypes.string,
+  data: propTypes.string,
 };

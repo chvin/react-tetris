@@ -1,5 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
+import propTypes from 'prop-types';
+
 import style from './index.less';
 import { transform } from '../../../unit/const';
 
@@ -32,13 +34,13 @@ export default class Button extends React.Component {
 }
 
 Button.propTypes = {
-  color: React.PropTypes.string.isRequired,
-  size: React.PropTypes.string.isRequired,
-  top: React.PropTypes.number.isRequired,
-  left: React.PropTypes.number.isRequired,
-  label: React.PropTypes.string.isRequired,
-  position: React.PropTypes.bool,
-  arrow: React.PropTypes.string,
-  active: React.PropTypes.bool.isRequired,
+  color: propTypes.string.isRequired,
+  size: propTypes.string.isRequired,
+  top: propTypes.number.isRequired,
+  left: propTypes.number.isRequired,
+  label: propTypes.string.isRequired,
+  position: propTypes.bool,
+  arrow: propTypes.string,
+  active: propTypes.bool.isRequired,
 };
 
