@@ -215,7 +215,11 @@ Web Audio Api 学习资料：
 * 一个项目从零开始，功能一点一滴慢慢累积，就会盖成高楼，不要畏难，有想法就敲起来吧。 ^_^
 
 ----
-## 7、开发
+## 7、控制流程
+![控制流程](https://img.alicdn.com/tfs/TB1B6ODRXXXXXXHaFXXXXXXXXXX-1920-1080.png)
+
+----
+## 8、开发
 ### 安装
 ```
 npm install

@@ -219,7 +219,11 @@ Web Audio Api learning materials:
 
 
 ----
-## 7. Development
+## 7. Flowchart
+![Flowchart](https://img.alicdn.com/tfs/TB1B6ODRXXXXXXHaFXXXXXXXXXX-1920-1080.png)
+
+----
+## 8. Development
 ### Install
 ```
 npm install
