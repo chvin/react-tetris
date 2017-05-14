@@ -27,7 +27,7 @@ Not only refers to the screen adaptation, `but the change of input depending on 
 
 What's the worst can happen when you're playing stand-alone games? Power outage. The state is stored in the `localStorage` by subscribing to `store.subscribe`, which records exactly all the state. Web page refreshes, the program crashes, the phone is dead, just re-open the connection and you can continue playing.
 
-### Redux state preview
+### Redux state preview ([Redux DevTools extension](https://github.com/zalmoxisus/redux-devtools-extension))
 ![Redux state preview](https://img.alicdn.com/tps/TB1hGQqNXXXXXX3XFXXXXXXXXXX-640-381.gif)
 
 Redux manages all the state that should be stored, which is a guarantee to be persisted as mentioned above.

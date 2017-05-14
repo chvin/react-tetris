@@ -27,7 +27,7 @@ Please view [README-EN.md](https://github.com/chvin/react-tetris/blob/master/REA
 
 玩单机游戏最怕什么？断电。通过订阅 `store.subscribe`，将state储存在localStorage，精确记录所有状态。网页关了刷新了、程序崩溃了、手机没电了，重新打开连接，都可以继续。
 
-### Redux 状态预览
+### Redux 状态预览（[Redux DevTools extension](https://github.com/zalmoxisus/redux-devtools-extension)）
 ![Redux状态预览](https://img.alicdn.com/tps/TB1hGQqNXXXXXX3XFXXXXXXXXXX-640-381.gif)
 
 Redux设计管理了所有应存的状态，这是上面持久化的保证。
