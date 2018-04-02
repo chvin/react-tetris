@@ -76,7 +76,6 @@ export default class Guide extends React.Component {
               src={this.state.QRCode}
               alt={i18n.QRCode[lan]}
             />
-            <span>{ i18n.QRNotice[lan] }</span>
           </div>
         ) : null }
       </div>
