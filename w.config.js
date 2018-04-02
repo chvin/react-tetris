@@ -103,6 +103,7 @@ var devServer = {
   hot: true, // Hot Module Replacement
   inline: true, // Livereload
   host: '0.0.0.0',
+  disableHostCheck: true
 };
 
 module.exports = {
