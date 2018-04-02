@@ -5,7 +5,7 @@ module.exports = {
   devtool: config.devtool,
   entry: config.entry,
   output: {
-    path: __dirname + '/build',
+    path: __dirname + '/docs',
     filename: 'app-' + config.version+'.js',
   },
   eslint: config.eslint,
