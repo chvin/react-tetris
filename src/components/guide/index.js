@@ -1,17 +1,30 @@
 import React from 'react';
+import QRCode from 'qrcode';
 import style from './index.less';
 import { transform, i18n, lan } from '../../unit/const';
 import { isMobile } from '../../unit';
+
 
 export default class Guide extends React.Component {
   constructor() {
     super();
     this.state = {
       isMobile: isMobile(),
+      QRCode: '',
     };
   }
-  shouldComponentUpdate() {
-    return false;
+  componentWillMount() {
+    if (this.state.isMobile) {
+      return;
+    }
+    QRCode.toDataURL(location.href, { margin: 1 })
+        .then(dataUrl => this.setState({ QRCode: dataUrl }));
+  }
+  shouldComponentUpdate(state) {
+    if (state.QRCode === this.state.QRCode) {
+      return false;
+    }
+    return true;
   }
   render() {
     if (this.state.isMobile) {
@@ -57,13 +70,15 @@ export default class Guide extends React.Component {
           </p>
           <div className={style.space}>SPACE</div>
         </div>
-        <div className={`${style.guide} ${style.qr}`}>
-          <img
-            src={`//game.weixin.qq.com/cgi-bin/comm/qrcode?s=10&m=1&d=${location.href}`}
-            alt={i18n.QRCode[lan]}
-            title={i18n.QRNotice[lan]}
-          />
-        </div>
+        { this.state.QRCode !== '' ? (
+          <div className={`${style.guide} ${style.qr}`}>
+            <img
+              src={this.state.QRCode}
+              alt={i18n.QRCode[lan]}
+            />
+            <span>{ i18n.QRNotice[lan] }</span>
+          </div>
+        ) : null }
       </div>
     );
   }
