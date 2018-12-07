@@ -128,7 +128,7 @@ Goal: `state` -> Immutable.
 Important plug-ins: [gajus/redux-immutable](https://github.com/gajus/redux-immutable)
 Will be provided by the original Redux combineReducers provided by the above plug-ins:
 ``` JavaScript
-// rootReduers.js
+// rootReducers.js
 // import { combineReducers } from 'redux'; // The old method
 import { combineReducers } from 'redux-immutable'; // The new method
 
