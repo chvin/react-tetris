@@ -28,8 +28,10 @@ export default class Keyboard extends React.Component {
     }, true);
 
     // 阻止双指放大
-    document.addEventListener('gesturestart', (event) => {
-      event.preventDefault();
+    document.addEventListener('gesturestart', (e) => {
+      if (e.preventDefault) {
+        event.preventDefault();
+      }
     });
 
     document.addEventListener('mousedown', (e) => {
