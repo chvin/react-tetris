@@ -1,7 +1,7 @@
 {
   "name": "react-tetris",
   "version": "1.0.1",
-  "description": "使用React、Redux、Immutable编写「俄罗斯方块」。Use Tetact, Redux, Immutable to coding \"Tetris\".",
+  "description": "使用React、Redux、Immutable编写「俄罗斯方块」。Use React, Redux, Immutable to coding \"Tetris\".",
   "scripts": {
     "start": "webpack-dev-server --progress",
     "build": "rm -rf ./docs/* && webpack --config ./webpack.production.config.js --progress && ls ./docs"
