@@ -238,5 +238,15 @@ npm run build
 
 在build文件夹下生成结果。
 
+----
+## 9、部署
+### 打包
+```
+docker build -t react-tetris . 
+```
+### 运行
+```
+docker run -d -p 0.0.0.0:8080:80 react-tetris
+```
 
 
