@@ -242,5 +242,14 @@ npm run build
 
 Will build the application in the build folder.
 
-
+----
+## 9、Deployment
+### build
+```
+docker build -t react-tetris . 
+```
+### run
+```
+docker run -d -p 0.0.0.0:8080:80 react-tetris
+```
 
