@@ -95,7 +95,7 @@ return oldArr.set(4, newValue);
 {a:1, b:2, c:3} === {a:1, b:2, c:3}; // false
 [1, 2, [3, 4]] === [1, 2, [3, 4]]; // false
 ```
-对于上面只能采用 `deepCopy`、`deepCompare`来遍历比较，不仅麻烦且好性能。
+对于上面只能采用 `deepCopy`、`deepCompare`来遍历比较，不仅麻烦且性能差。
 
 我们感受来一下`Immutable`的做法！
 ``` JavaScript
