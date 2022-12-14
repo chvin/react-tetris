@@ -246,7 +246,7 @@ En el [i18n.json](https://github.com/chvin/react-tetris/blob/master/i18n.json) e
 npm run build
 ```
 
-Construirá la aplicación en la carpeta de `build`.
+Construirá la aplicación en la carpeta de `build` (docs).
 
 
 
