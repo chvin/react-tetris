@@ -1,5 +1,5 @@
 {
-  "lan": ["cn", "en", "fr", "fa", "es"],
+  "lan": ["cn", "en", "fr", "fa", "es", "pt", "ca"],
   "default": "cn",
   "data": {
     "title": {
@@ -97,9 +97,9 @@
       "en": "Start Line",
       "fr": "Ligne Départ",
       "fa": "خط شروع",
-      "es": "Línea de Inicio",
-      "pt": "Linha de Início",
-      "ca": "Línia d'Inici"
+      "es": "Línea",
+      "pt": "Linha",
+      "ca": "Línia"
     },
     "next": {
       "cn": "下一个",
@@ -178,7 +178,7 @@
       "en": "Drop",
       "fr": "Tomber",
       "fa": "سقوط",
-      "es": "Tirar",
+      "es": "Soltar",
       "pt": "Soltar",
       "ca": "Deixar"
     }
