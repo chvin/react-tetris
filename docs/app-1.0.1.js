@@ -28177,9 +28177,15 @@
 	
 	var getParam = function getParam(param) {
 	  // 获取浏览器参数
-	  var r = new RegExp('\\?(?:.+&)?' + param + '=(.*?)(?:&.*)?$');
-	  var m = window.location.toString().match(r);
-	  return m ? decodeURI(m[1]) : '';
+	  // const r = new RegExp(`\\?(?:.+&)?${param}=(.*?)(?:&.*)?$`);
+	  // const m = window.location.toString().match(r);
+	  // return m ? decodeURI(m[1]) : '';
+	
+	  // Better way to get param
+	  // 更好的获取参数的方式
+	  // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+	  var url = new URL(window.location.href.toString());
+	  return url.searchParams.get("lan") || '';
 	};
 	
 	var lan = function () {
