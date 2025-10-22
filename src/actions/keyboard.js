@@ -35,6 +35,14 @@ function rotate(data) {
   };
 }
 
+// Added hold piece functionality
+function hold(data) {
+  return {
+    type: reducerType.KEY_HOLD,
+    data,
+  };
+}
+
 function reset(data) {
   return {
     type: reducerType.KEY_RESET,
@@ -62,6 +70,7 @@ export default {
   left,
   right,
   rotate,
+  hold,    // Added to exports
   reset,
   music,
   pause,
