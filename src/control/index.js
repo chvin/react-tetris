@@ -1,5 +1,6 @@
 import store from '../store';
 import todo from './todo';
+import gamepad from './gamepad';
 
 const keyboard = {
   37: 'left',
@@ -41,4 +42,6 @@ const keyUp = (e) => {
 
 document.addEventListener('keydown', keyDown, true);
 document.addEventListener('keyup', keyUp, true);
+
+gamepad.start();
 

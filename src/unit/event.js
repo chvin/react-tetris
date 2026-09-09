@@ -1,11 +1,8 @@
 const eventName = {};
 
 const down = (o) => { // 键盘、手指按下
-  const keys = Object.keys(eventName);
-  keys.forEach(i => {
-    clearTimeout(eventName[i]);
-    eventName[i] = null;
-  });
+  clearTimeout(eventName[o.key]);
+  eventName[o.key] = null;
   if (!o.callback) {
     return;
   }
